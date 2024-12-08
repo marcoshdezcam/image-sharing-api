@@ -71,8 +71,9 @@ This API will provide users the ability to register, login, create and update im
 ### Design <a name="key-features"></a>
 
 <img src="design.png" alt="logo" width="auto"  height="auto" />
+<img src="db.png" alt="logo" width="auto"  height="auto" />
 
-> Describe between 1-3 key features of the application.
+> Main features:
 
 - **Register and Login users**
 - **Users will be able to manage username, email, password and profile picture.**
@@ -85,7 +86,7 @@ This API will provide users the ability to register, login, create and update im
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+> In progress...
 
 - [Live Demo Link]()
 
