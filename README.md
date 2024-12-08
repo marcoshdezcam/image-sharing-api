@@ -2,11 +2,10 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
 
+  <h3><b>Image Sharing API</b></h3>
+  
   <br/>
-
-  <h3><b>Personal Portfolio</b></h3>
 
 </div>
 
@@ -36,17 +35,15 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Personal Portfolio] <a name="about-project"></a>
+# 📖 Image Sharing API<a name="about-project"></a>
 
-> This is my personal portfolio for the Microverse curriculum.
-
-**Micro-portfolio** is an initial version for my personal portfolio based on the Microverse proposals.
+This API will provide users the ability to register, login, create and update image posts. After registering, users will be able to manage their details: username, email, and profile picture, The API will handle image uploads, allowing users to create image posts with optional descriptions.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> API designed to serve a React frontend. Built with Express.js on top of Node.js and a DynamoDB, teherefore it would be ideal to deploy in a AWS cloud.
 
 <details>
   <summary>Client</summary>
@@ -65,19 +62,22 @@
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.postgresql.org/">DynamoDB</a></li>
   </ul>
 </details>
 
 <!-- Features -->
 
-### Key Features <a name="key-features"></a>
+### Design <a name="key-features"></a>
+
+<img src="design.png" alt="logo" width="auto"  height="auto" />
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **Register and Login users**
+- **Users will be able to manage username, email, password and profile picture.**
+- **Create and update user's own image posts with optional captions descriptions.**
+- **The API will handle all image uploads.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -87,17 +87,13 @@
 
 > Add a link to your deployed project.
 
-- [Live Demo Link](https://yourdeployedapplicationlink.com)
+- [Live Demo Link]()
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
@@ -209,39 +205,11 @@ Feel free to check the [issues page](../../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
-
-## ⭐️ Show your support <a name="support"></a>
-
-> Write a message to encourage readers to support your project
-
-If you like this project...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
-
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
-
-> Give credit to everyone who inspired your codebase.
-
-I would like to thank...
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 <!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
-
-- **[Question_1]**
-
-  - [Answer_1]
-
-- **[Question_2]**
-
-  - [Answer_2]
+>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -250,7 +218,5 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
