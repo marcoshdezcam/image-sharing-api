@@ -5,11 +5,15 @@
   "author": "Marcos Hernández Campos (marcoshdezcam@gmail.com)",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "build": "npx tsc",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
+    "concurrently": "^9.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.7.2"
   },
   "dependencies": {
