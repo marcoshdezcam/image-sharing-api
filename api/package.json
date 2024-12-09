@@ -5,15 +5,17 @@
   "author": "Marcos Hernández Campos (marcoshdezcam@gmail.com)",
   "license": "MIT",
   "scripts": {
-    "build": "npx tsc",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "start": "node src/index.js",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon -r tsconfig-paths/register src/index.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
     "@types/node": "^22.10.1",
     "concurrently": "^9.1.0",
     "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.7.2"
   },
   "dependencies": {
