@@ -46,16 +46,34 @@ This API will provide users the ability to register, login, create and update im
 > API designed to serve a React frontend. Built with Express.js on top of Node.js and a DynamoDB, teherefore it would be ideal to deploy in a AWS cloud.
 
 <details>
-  <summary>Client</summary>
+  <summary>Client: React</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+  <ul>
+    <li><a href=""></a></li>
+  </ul>
+  <ul>
+    <li><a href=""></a></li>
+  </ul>
+  <ul>
+    <li><a href=""></a></li>
   </ul>
 </details>
 
 <details>
-  <summary>Server</summary>
+  <summary>Backend: Express.js</summary>
   <ul>
     <li><a href="https://expressjs.com/">Express.js</a></li>
+  </ul>
+  <ul>
+    <li><a href="">Multer - Image upload</a></li>
+  </ul>
+  <ul>
+    <li><a href=""></a></li>
+  </ul>
+  <ul>
+    <li><a href=""></a></li>
   </ul>
 </details>
 
