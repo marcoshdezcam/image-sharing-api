@@ -12,13 +12,7 @@ const app: Express = express();
 const port = process.env.PORT || 3000;
 
 // Database
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true, useUnifiedTopology: true },
-  () => {
-    console.log("Connected to MongoDB");
-  }
-);
+mongoose.connect(process.env.MONGO_URL!, {});
 
 // Middleware
 app.use("/images", express.static(path.join(__dirname, "public/images")));
@@ -38,12 +32,15 @@ app.listen(port, () => {
 // Multer
 const imgStorage = multer.diskStorage({
   destination: (req, file, cb) => {
+    cb(null, "public/images");
+  },
+  filename: (req, file, cb) => {
     cb(null, req.body.name);
   },
 });
 const upload = multer({ storage: imgStorage });
 // Upload image to DB
-app.post("/api/upload", upload.single("file"), (req, res) => {
+app.post("/api/upload", (req: any, res: any) => {
   try {
     return res.status(200).json("File uploaded!!!");
   } catch (error) {

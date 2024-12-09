@@ -2,3 +2,4 @@
 **.bkp
 tags
 **/node_modules/**
+**/dist/**

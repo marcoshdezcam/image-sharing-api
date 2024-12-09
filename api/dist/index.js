@@ -14,9 +14,7 @@ dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
 // Database
-mongoose_1.default.connect(process.env.MONGO_URL, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-    console.log("Connected to MongoDB");
-});
+mongoose_1.default.connect(process.env.MONGO_URL, {});
 // Middleware
 app.use("/images", express_1.default.static(path.join(__dirname, "public/images")));
 app.use(express_1.default.json());
@@ -32,12 +30,15 @@ app.listen(port, () => {
 // Multer
 const imgStorage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
+        cb(null, "public/images");
+    },
+    filename: (req, file, cb) => {
         cb(null, req.body.name);
     },
 });
 const upload = (0, multer_1.default)({ storage: imgStorage });
 // Upload image to DB
-app.post("/api/upload", upload.single("file"), (req, res) => {
+app.post("/api/upload", (req, res) => {
     try {
         return res.status(200).json("File uploaded!!!");
     }
