@@ -1,0 +1,20 @@
+{
+  "name": "image_sharing_api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Marcos Hernández Campos (marcoshdezcam@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.1",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.7"
+  }
+}
