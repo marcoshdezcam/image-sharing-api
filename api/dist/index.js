@@ -10,23 +10,29 @@ const morgan_1 = __importDefault(require("morgan"));
 const multer_1 = __importDefault(require("multer"));
 const path = require("path");
 const mongoose_1 = __importDefault(require("mongoose"));
+const auth_1 = require("./routes/auth");
+const users_1 = require("./routes/users");
+const posts_1 = require("./routes/posts");
 dotenv_1.default.config();
 const app = (0, express_1.default)();
 const port = process.env.PORT || 3000;
-// Database
 mongoose_1.default.connect(process.env.MONGO_URL, {});
 // Middleware
 app.use("/images", express_1.default.static(path.join(__dirname, "public/images")));
 app.use(express_1.default.json());
 app.use((0, helmet_1.default)());
 app.use((0, morgan_1.default)("common"));
-// Import Routes
+// Routes
 app.get("/", (req, res) => {
     res.send("TS Express Server");
 });
 app.listen(port, () => {
     console.log(`[server]: Server running at port: ${port}`);
 });
+// Import Routes
+app.use(auth_1.authRouter);
+app.use(users_1.usersRouter);
+app.use(posts_1.postsRouter);
 // Multer
 const imgStorage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
