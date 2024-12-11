@@ -6,12 +6,14 @@ import multer from "multer";
 import path = require("path");
 import mongoose from "mongoose";
 
+import { authRouter } from "./routes/auth";
+import { usersRouter } from "./routes/users";
+import { postsRouter } from "./routes/posts";
+
 dotenv.config();
 
 const app: Express = express();
 const port = process.env.PORT || 3000;
-
-// Database
 mongoose.connect(process.env.MONGO_URL!, {});
 
 // Middleware
@@ -20,14 +22,17 @@ app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));
 
-// Import Routes
+// Routes
 app.get("/", (req: Request, res: Response) => {
   res.send("TS Express Server");
 });
-
 app.listen(port, () => {
   console.log(`[server]: Server running at port: ${port}`);
 });
+// Import Routes
+app.use(authRouter);
+app.use(usersRouter);
+app.use(postsRouter);
 
 // Multer
 const imgStorage = multer.diskStorage({
