@@ -24,7 +24,7 @@ app.use((0, helmet_1.default)());
 app.use((0, morgan_1.default)("common"));
 // Routes
 app.get("/", (req, res) => {
-    res.send("TS Express Server");
+    res.send("Image Sharing API");
 });
 app.listen(port, () => {
     console.log(`[server]: Server running at port: ${port}`);

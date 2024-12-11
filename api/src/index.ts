@@ -24,7 +24,7 @@ app.use(morgan("common"));
 
 // Routes
 app.get("/", (req: Request, res: Response) => {
-  res.send("TS Express Server");
+  res.send("Image Sharing API");
 });
 app.listen(port, () => {
   console.log(`[server]: Server running at port: ${port}`);
