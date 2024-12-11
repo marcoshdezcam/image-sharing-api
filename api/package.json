@@ -1,0 +1,34 @@
+{
+  "name": "image_sharing_api",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Marcos Hernández Campos (marcoshdezcam@gmail.com)",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
+    "start": "node src/index.js",
+    "dev": "nodemon -r tsconfig-paths/register src/index.ts"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/mongoose": "^5.11.97",
+    "@types/morgan": "^1.9.9",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.10.1",
+    "concurrently": "^9.1.0",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "helmet": "^8.0.0",
+    "mongoose": "^8.8.4",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7",
+    "path": "^0.12.7"
+  }
+}
