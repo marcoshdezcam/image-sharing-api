@@ -30,9 +30,9 @@ app.listen(port, () => {
     console.log(`[server]: Server running at port: ${port}`);
 });
 // Import Routes
-app.use(auth_1.authRouter);
-app.use(users_1.usersRouter);
-app.use(posts_1.postsRouter);
+app.use("/api/auth", auth_1.authRouter);
+app.use("/api/user", users_1.usersRouter);
+app.use("/api/post", posts_1.postsRouter);
 // Multer
 const imgStorage = multer_1.default.diskStorage({
     destination: (req, file, cb) => {
@@ -52,3 +52,4 @@ app.post("/api/upload", (req, res) => {
         console.log(error);
     }
 });
+module.exports = app;
